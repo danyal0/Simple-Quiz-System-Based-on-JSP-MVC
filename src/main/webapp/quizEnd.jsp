@@ -14,7 +14,7 @@
 </head>
 <body>
 <%
-    HttpSession s  = request.getSession();
+    HttpSession s = request.getSession();
 %>
 <h1>The Number Quiz (MVC)</h1>
 <p>The quiz is over. Your final score is ${sessionScope.quiz.score}/5. Try again?</p><!--%=quiz.getScore()%>-->

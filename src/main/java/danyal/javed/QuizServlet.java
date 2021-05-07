@@ -10,7 +10,7 @@ import java.io.IOException;
 public class QuizServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doPost(request,response);
+        this.doPost(request, response);
     }
 
     @Override
@@ -22,9 +22,9 @@ public class QuizServlet extends HttpServlet {
         quiz = (Quiz) s.getAttribute("quiz");
         if (answer != 0 && quiz.getCurrent() < 5) quiz.next(answer, quiz.getCurrent());
         if (quiz.getCurrent() < 5)
-            request.getRequestDispatcher("index.jsp").forward(request,response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         else {
-            request.getRequestDispatcher("quizEnd.jsp").forward(request,response);
+            request.getRequestDispatcher("quizEnd.jsp").forward(request, response);
         }
     }
 }
